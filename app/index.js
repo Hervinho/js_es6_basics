@@ -9,9 +9,15 @@ let arrayTwo = [0, 1, ...arrayOne, 5];
 console.log(`arrayTwo: ${arrayTwo}`);
 
 /* Object destructuring */
+//with array
 let arr = ['a', 'b', 'c', 'd'];
 let [a, b] = arr;
 console.log(a, b);
+
+//with Object
+let pharaoh = {name: 'Cleopatra', children: 4};
+let {name, children} = pharaoh;
+console.log(name, children);
 
 //Example 2: using spread operator in a function.
 function spread(...x){
