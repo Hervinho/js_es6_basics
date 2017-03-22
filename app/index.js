@@ -136,3 +136,17 @@ let new_nums = new Set(nums);//convert array into a set.
 console.log('Array to Set', new_nums);
 console.log('Set', set);
 console.log('Set size', set.size);
+
+/* Maps */
+//use keys and values, and are more flexible than normal objects.
+let map = new Map();
+let key1 = "key1", key2 = {a: 'key2'}, key3 = () => 0;
+map.set(key1, "return value for key");
+map.set(key2, "return value for object key");
+map.set(key3, "return value for function key");
+console.log(map);
+
+//convert array into map
+let array1 = [[1, 'one'], [2, 'deux']];
+let arrMap = new Map(array1);
+console.log('arrMap', arrMap);
