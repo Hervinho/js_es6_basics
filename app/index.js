@@ -1,8 +1,8 @@
 //Using data from other files without doing modules.export like in node
-import {hero, total} from './hero.js';
-import {multiply} from './calculate.js';
-import add from './calculate.js'; //import default
-import {Person} from './person.js';
+import {hero, total} from './hero';
+import {multiply} from './calculate';
+import add from './calculate'; //import default
+import {Person, Man} from './person';
 
 const numbers = [2,4,6];//const variables are always read-only
 numbers.push('Hello');
@@ -90,6 +90,11 @@ console.log(`multiply: ${multiply(2,3)}`);//imported from calculate.js
 console.log(`add: ${add(2,3)}`);//imported from calculate.js
 
 /* Classes */
-let dude = new Person('Lucky Luke', 'Male');
-console.log(`Person. Name:  ${dude.name} and Gender: ${dude.gender}`);
+let human = new Person('Tintin', 100);
+console.log('Human', human);
+human.greet();
+
+//inheritance
+let dude = new Man('Bruce Wayne', 40, 'Male');
+console.log('Dude', dude);
 dude.greet();
