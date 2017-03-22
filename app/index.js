@@ -69,3 +69,12 @@ console.log(`endsWith: ${c.endsWith("lo")}`);
 
 //includes
 console.log(`includes: ${c.includes("el")}`);
+
+/* Checking numbers */
+const addToCart = (item, num) => {
+  //return Number.isFinite(num);//check if num parameter passed is finite number
+  return Number.isSafeInteger(num);//check if num parameter passed is integer that JS can handle.
+};
+
+console.log('addToCart', addToCart('pants', Infinity));
+//console.log('addToCart', addToCart('pants', Math.pow(2, 56)));
