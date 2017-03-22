@@ -131,7 +131,7 @@ let set = new Set();
 set.add(12);
 set.add(24);
 set.add('Sup!');
-set.add({x: 10});
+set.add({r: 10});
 let new_nums = new Set(nums);//convert array into a set.
 console.log('Array to Set', new_nums);
 console.log('Set', set);
@@ -150,3 +150,26 @@ console.log(map);
 let array1 = [[1, 'one'], [2, 'deux']];
 let arrMap = new Map(array1);
 console.log('arrMap', arrMap);
+
+/* Closures and scope */
+let z = () => {
+  let secret = 'hidden';
+  //revealIt function will make secret variable available even out of this scope.
+  let revealIt = () => {
+    console.log(secret);
+  }
+  revealIt();
+}
+z();
+
+/* Function factories */
+//They are functions that take arguments then return another functions
+//In this function, x is the prefix that will be added to a string.
+//and y is the string to which a prefix x will be added.
+const addPrefix = (x) => {  
+  return y => x + y;
+}
+
+let add_un = addPrefix("im");
+let variable = add_un("possible");
+console.log('variable', variable);
