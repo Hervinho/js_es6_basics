@@ -99,5 +99,28 @@ let dude = new Man('Bruce Wayne', 40, 'Male');
 console.log('Dude', dude);
 dude.greet();
 
-//static methods
+/* static methods */
 let death = Death.canDie();
+
+/*JS Prototypes */
+function City(name, province){
+  this.name = name;
+  this.province = province;
+  this.where = () =>{
+    console.log(`in province of ${this.province}`);
+  }
+}
+
+//add new property to the prototype.
+City.prototype.mayor;
+
+//add new function to the prototype.
+City.prototype.welcome = function(){
+  console.log(`Welcome to the city of ${this.name}`);
+};
+
+let town = new City('Pretoria', 'Gauteng');
+town.mayor = 'Mr Mayor';
+town.welcome();
+console.log('Town', town);
+town.where();
