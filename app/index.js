@@ -51,5 +51,21 @@ console.log(`nums_doubled: ${nums_doubled}`);
 
 /*Filter method*/
 //get values > 5 in nums array.
-let nums_greater = nums.filter((n) => n > 5);//this returns boolean results
+let nums_greater = nums.filter((n) => n > 5);
 console.log(`nums_greater: ${nums_greater}`);
+
+/* String helper methods */
+//repeat
+//let string = 'Yo' + 'o'.repeat(5);
+let string = `Yo${"o".repeat(5)}`;
+console.log(`string: ${string}`);
+
+//startsWith
+let c = "hello";
+console.log(`startsWith: ${c.startsWith("he")}`);
+
+//endsWith
+console.log(`endsWith: ${c.endsWith("lo")}`);
+
+//includes
+console.log(`includes: ${c.includes("el")}`);
