@@ -1,3 +1,8 @@
+//Using data from other files without doing modules.export like in node
+import {hero, total} from './hero.js';
+import {multiply} from './calculate.js';
+import add from './calculate.js'; //import default
+
 const numbers = [2,4,6];//const variables are always read-only
 numbers.push('Hello');
 console.log(`numbers: ${numbers}`);
@@ -78,3 +83,7 @@ const addToCart = (item, num) => {
 
 console.log('addToCart', addToCart('pants', Infinity));
 //console.log('addToCart', addToCart('pants', Math.pow(2, 56)));
+
+console.log(hero, total);//imported from hero.js
+console.log(`multiply: ${multiply(2,3)}`);//imported from calculate.js
+console.log(`add: ${add(2,3)}`);//imported from calculate.js
