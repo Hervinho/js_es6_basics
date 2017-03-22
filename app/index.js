@@ -2,6 +2,7 @@
 import {hero, total} from './hero.js';
 import {multiply} from './calculate.js';
 import add from './calculate.js'; //import default
+import {Person} from './person.js';
 
 const numbers = [2,4,6];//const variables are always read-only
 numbers.push('Hello');
@@ -87,3 +88,8 @@ console.log('addToCart', addToCart('pants', Infinity));
 console.log(hero, total);//imported from hero.js
 console.log(`multiply: ${multiply(2,3)}`);//imported from calculate.js
 console.log(`add: ${add(2,3)}`);//imported from calculate.js
+
+/* Classes */
+let dude = new Person('Lucky Luke', 'Male');
+console.log(`Person. Name:  ${dude.name} and Gender: ${dude.gender}`);
+dude.greet();
