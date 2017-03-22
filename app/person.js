@@ -21,4 +21,12 @@ class Man extends Person{
   }
 }
 
-export {Person, Man};
+//class with static method.
+//Such class can be used without having to instatiate object.
+class Death{
+  static canDie(){
+    console.log('Everyone can and will die');
+  }
+}
+
+export {Person, Man, Death};

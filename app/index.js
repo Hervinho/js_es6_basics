@@ -2,7 +2,7 @@
 import {hero, total} from './hero';
 import {multiply} from './calculate';
 import add from './calculate'; //import default
-import {Person, Man} from './person';
+import {Person, Man, Death} from './person';
 
 const numbers = [2,4,6];//const variables are always read-only
 numbers.push('Hello');
@@ -98,3 +98,6 @@ human.greet();
 let dude = new Man('Bruce Wayne', 40, 'Male');
 console.log('Dude', dude);
 dude.greet();
+
+//static methods
+let death = Death.canDie();
