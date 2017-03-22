@@ -1,6 +1,6 @@
 const numbers = [2,4,6];//const variables are always read-only
 numbers.push('Hello');
-console.log(numbers);
+console.log(`numbers: ${numbers}`);
 
 /*Spread operators*/
 //Example 1: Here we combine two arrays into one.
@@ -41,3 +41,15 @@ function screamIt(){
 
 scream();
 screamIt();
+
+/*Map method */
+let nums = [3, 6, 9];//simple array.
+
+//double each item in nums array.
+let nums_doubled = nums.map((n) => n * 2);
+console.log(`nums_doubled: ${nums_doubled}`);
+
+/*Filter method*/
+//get values > 5 in nums array.
+let nums_greater = nums.filter((n) => n > 5);//this returns boolean results
+console.log(`nums_greater: ${nums_greater}`);
