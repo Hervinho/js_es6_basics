@@ -124,3 +124,15 @@ town.mayor = 'Mr Mayor';
 town.welcome();
 console.log('Town', town);
 town.where();
+
+/* Sets */
+//sets are similar to arrays but do not accept duplicates.
+let set = new Set();
+set.add(12);
+set.add(24);
+set.add('Sup!');
+set.add({x: 10});
+let new_nums = new Set(nums);//convert array into a set.
+console.log('Array to Set', new_nums);
+console.log('Set', set);
+console.log('Set size', set.size);
