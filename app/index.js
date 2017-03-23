@@ -166,10 +166,32 @@ z();
 //They are functions that take arguments then return another functions
 //In this function, x is the prefix that will be added to a string.
 //and y is the string to which a prefix x will be added.
-const addPrefix = (x) => {  
+const addPrefix = (x) => {
   return y => x + y;
 }
 
 let add_un = addPrefix("im");
 let variable = add_un("possible");
 console.log('variable', variable);
+
+/* Iterators */
+const iteratorArray = (array) => {
+  let index = 0;
+
+  //return next item in array and increase index by 1 every time
+  return {
+    next: () => {
+      if(index < array.length){
+        let nextItem = array[index];
+        index++;
+        return nextItem;
+      }
+    }
+  }
+}
+
+let myIterator = iteratorArray([2,4,6]);
+console.log('myIterator', myIterator.next());
+console.log('myIterator', myIterator.next());
+console.log('myIterator', myIterator.next());
+console.log('myIterator', myIterator.next());
